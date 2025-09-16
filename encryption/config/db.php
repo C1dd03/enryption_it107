@@ -2,7 +2,7 @@
 
 class Database {
     private $host = "localhost";
-    private $dbname = "mylogreg_form";  // Change this if needed
+    private $dbname = "encryption_system";  // Change this if needed
     private $username = "root";  // Change based on your MySQL credentials
     private $password = "";  // Change based on your MySQL credentials
     private static $instance = null;
