@@ -1,0 +1,49 @@
+<style>
+  .form {
+    display: none;
+  }
+  .form.active {
+    display: block;
+  }
+  .toggle {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>
+
+<div id="login" class="form">
+  <h2>Login</h2>
+  <form>
+    <input type="text" placeholder="Username" />
+    <br />
+    <input type="password" placeholder="Password" />
+    <br />
+    <button type="button">Login</button>
+  </form>
+  <p class="toggle" onclick="showForm('register')">Don't have an account? Register</p>
+</div>
+
+<div id="register" class="form active">
+  <h2>Register</h2>
+  <form>
+    <input type="text" placeholder="Username" />
+    <br />
+    <input type="email" placeholder="Email" />
+    <br />
+    <input type="password" placeholder="Password" />
+    <br />
+    <button type="button">Register</button>
+  </form>
+  <p class="toggle" onclick="showForm('login')">Already have an account? Login</p>
+</div>
+
+<script>
+  function showForm(id) {
+    document.querySelectorAll(".form").forEach((f) => {
+      f.classList.remove("active");
+      f.querySelector("form").reset(); // clear inputs when hiding
+    });
+    document.getElementById(id).classList.add("active");
+  }
+</script>
