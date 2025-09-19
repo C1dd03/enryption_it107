@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pick&Match | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap "
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hidden Checkbox for toggle -->
+    <!--   <input type="checkbox" id="toggle" /> -->
+
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/dowlogo2.png" width="125px" />
+        </div>
+
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="">Home</a></li>
+            <!-- <li><a href="">Products</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Account</a></li> -->
+            <li>
+              <label for="toggle" class="login-link" style="cursor: pointer" onclick="updateNavLinks('login')">
+                Login
+              </label>
+            </li>
+          </ul>
+        </nav>
+        <img src="images/cart.png" width="30px" height="30px" />
+      </div>
+    </div>
+
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <img src="images/image1.png" width="100%" />
+          </div>
+
+          <div class="column">
+            <input type="checkbox" id="toggle" hidden />
+            <div class="form-container">
+              <!-- Login Form -->
+              <form class="login-form">
+                <h2>Login</h2>
+                <div class="input-field">
+                  <input type="text" required placeholder=" " />
+                  <label>Username</label>
+                </div>
+                <div class="input-field">
+                  <input type="password" required placeholder=" " />
+                  <label>Password</label>
+                </div>
+                <button class="btn">Login</button>
+                <label for="toggle" class="toggle-link" onclick="updateNavLinks('login')">
+                  Don't have an account? Register
+                </label>
+              </form>
+
+              <!-- Register Form -->
+              <form class="register-form">
+                <h2>Registration</h2>
+                <!-- Step 1: Personal Info -->
+                <input type="radio" name="step" id="step1" checked hidden />
+                <input type="radio" name="step" id="step2" hidden />
+                <input type="radio" name="step" id="step3" hidden />
+
+                <div class="step step-1">
+                  <span>Personal Information</span>
+                  <div class="input-field full">
+                    <input type="number" required placeholder="xxxx-xxxx " />
+                    <label>ID Number</label>
+                  </div>
+
+                  <div class="input-field">
+                    <input type="text" required placeholder=" " />
+                    <label>Firstname</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" required placeholder=" " />
+                    <label>Middlename</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" required placeholder=" " />
+                    <label>Lastname</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" required placeholder="e.g., Jr., Sr., III" />
+                    <label>Extension-name</label>
+                  </div>
+                  <div class="age-sex">
+                    <div class="input-field">
+                      <input type="date" required placeholder=" " />
+                      <label for="birthdate">Birthdate</label>
+                    </div>
+                    <div class="input-field">
+                      <input type="number" required placeholder=" " />
+                      <label>Age</label>
+                    </div>
+                    <div class="input-field">
+                      <select required>
+                        <option value="" disabled selected hidden></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                      <label>Gender</label>
+                    </div>
+                  </div>
+                  <label for="step2" class="btn next-btn" style="text-align: end">Next →</label>
+                </div>
+
+                <!-- Step 2: Address Info -->
+
+                <div class="step step-2">
+                  <span>Address Information</span>
+                  <div class="input-field">
+                    <input type="text" name="street" required pattern=".{2,}" placeholder=" " />
+                    <label>Purok/Street</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="barangay" required pattern="[A-Za-z\s]{2,}" placeholder=" " />
+                    <label>Barangay</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="city" required pattern="[A-Za-z\s]{2,}" placeholder=" " />
+                    <label>Municipal/City</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="province" required pattern="[A-Za-z\s]{2,}" placeholder=" " />
+                    <label>Province</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="country" required pattern="[A-Za-z\s]{2,}" placeholder=" " />
+                    <label>Country</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="number" name="zip" required pattern="\d{4}" placeholder=" " />
+                    <label>Zip Code</label>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; gap: 10px">
+                    <label for="step1" class="btn prev-btn">← Prev</label>
+                    <label for="step3" class="btn next-btn">Next →</label>
+                  </div>
+                </div>
+
+                <!-- Step 3: Account Info -->
+                <div class="step step-3">
+                  <span>Account Information</span>
+                  <div class="input-field">
+                    <input type="text" required placeholder=" " />
+                    <label>Username</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="email" required placeholder=" " />
+                    <label>Email</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" required placeholder=" " />
+                    <label>Password</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" required placeholder=" " />
+                    <label>Re-enter-password</label>
+                  </div>
+                  <div style="display: flex; justify-content: flex-start; flex-direction: column">
+                    <label for="step2" class="btn prev-btn" style="text-align: start">← Prev</label>
+                    <button class="btn" type="submit">Register</button>
+                  </div>
+                </div>
+                <label for="toggle" class="toggle-link" onclick="updateNavLinks('register')">
+                  Already have an account? Login
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/dowlogoWhite.png" />
+            <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+            <p></p>
+          </div>
+
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright 2025 - CSUCC sites</p>
+      </div>
+    </div>
+    <script src="assets/js/reset-form.js"></script>
+  </body>
+</html>

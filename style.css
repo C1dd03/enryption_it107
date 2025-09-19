@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* <================== NAV BAR SECTION ================== */
+
+.logo {
+  padding-top: 7px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px; /*dsadad*/
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+p {
+  color: #555;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* <================== IMAGE AND FORM SECTION ================== */
+
+.account-page {
+  padding: auto 0px;
+  background: radial-gradient(#fff, #ffd6d6);
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 70px;
+  justify-content: space-around;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.form-container {
+  background: #fff;
+  width: 340px;
+  /* height: 500px; */
+  position: relative;
+  text-align: center;
+  padding: 20px 20px;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: height 0.5s ease;
+}
+
+/* Default login size */
+#toggle:not(:checked) ~ .form-container {
+  height: 100%;
+}
+
+/* Expanded register size */
+#toggle:checked ~ .form-container {
+  /*   top: -50px; */
+  width: 400px;
+  height: 100%;
+}
+
+.login-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 20px;
+  gap: 10px;
+  margin-bottom: 70px;
+}
+
+.register-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: -10px;
+}
+
+.input-field {
+  width: 100%;
+  position: relative;
+  margin: 10px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #ffffff6b;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: none;
+}
+
+.input-field label {
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  color: #c0c0c0;
+  font-size: 14px;
+  transition: 0.3s;
+  pointer-events: none;
+  background: white;
+  padding: 0 10px;
+}
+
+/* Float when focused */
+/* Float when focused */
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label,
+.input-field select:focus ~ label,
+.input-field select:valid ~ label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #ff692a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggle-link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #000000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#toggle:not(:checked) ~ .form-container .register-form {
+  display: none;
+}
+#toggle:checked ~ .form-container .login-form {
+  display: none;
+}
+.login-link,
+.register-link {
+  cursor: pointer;
+}
+#toggle:not(:checked) ~ .container .navbar .login-link {
+  display: none;
+}
+#toggle:checked ~ .container .navbar .register-link {
+  display: none;
+}
+
+/* Hide the checkbox */
+#toggle {
+  display: none;
+}
+
+.step-2 {
+  display: flex;
+  /*   flex-direction: column; */
+  gap: 50px;
+}
+
+.age-sex {
+  display: flex;
+  gap: 10px;
+}
+
+.prev-btn {
+  margin-bottom: 10px;
+}
+
+/* Hide all steps by default */
+.register-form .step {
+  display: none;
+}
+
+/* Show step 1 when #step1 is checked */
+#step1:checked ~ .step-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+/* Show step 2 when #step2 is checked */
+#step2:checked ~ .step-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+/* Show step 3 when #step3 is checked */
+#step3:checked ~ .step-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+span {
+  border-bottom: 2px solid #ff692a;
+  margin-top: 5px;
+}
+
+/* <===================== FOOTER SECTION ================== */
+
+.footer {
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+
+.footer p {
+  color: #8a8a8a;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+}
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app-logo {
+  margin-top: 20px;
+}
+
+.app-logo img {
+  width: 140px;
+}
+
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+}
