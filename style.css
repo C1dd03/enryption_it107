@@ -121,6 +121,29 @@ p {
   background-color: #ffffff6b;
 }
 
+<<<<<<< HEAD
+=======
+.pass-input-field {
+  width: 100%;
+  position: relative;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: #ffffff6b;
+  padding: 5px;
+  margin-bottom: 2px;
+}
+
+.pass-input-field input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: none;
+}
+
+>>>>>>> newrepo/Original-Pick-and-Match
 .input-field input,
 .input-field select {
   width: 100%;
@@ -132,7 +155,54 @@ p {
   background: none;
 }
 
+<<<<<<< HEAD
+=======
+/* Password Strength bar */
+.password-strenght-container {
+  width: 100%;
+  padding: 0px 3px;
+  background-color: transparent;
+  height: 3px;
+}
+
+.password-strenght {
+  display: none;
+  width: 0%;
+  height: 3px;
+  /* background-color: #f80000; */
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+/* Password Strength Message */
+.message {
+  font-size: small;
+  text-align: start;
+  margin-left: 5px;
+  display: none;
+}
+
+>>>>>>> newrepo/Original-Pick-and-Match
 .input-field label {
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  color: #c0c0c0;
+  font-size: 14px;
+  transition: 0.3s;
+  pointer-events: none;
+  background: white;
+  padding: 0 10px;
+}
+
+<<<<<<< HEAD
+/* Float when focused */
+/* Float when focused */
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label,
+=======
+/* Password Field input */
+.pass-input-field label {
   position: absolute;
   left: 5px;
   top: 8px;
@@ -147,7 +217,12 @@ p {
 /* Float when focused */
 /* Float when focused */
 .input-field input:focus ~ label,
+/* Password Field input */
+.pass-input-field input:focus ~ label,
 .input-field input:not(:placeholder-shown) ~ label,
+/* Password Field input */
+.pass-input-field input:not(:placeholder-shown) ~ label,
+>>>>>>> newrepo/Original-Pick-and-Match
 .input-field select:focus ~ label,
 .input-field select:valid ~ label {
   top: -8px;
